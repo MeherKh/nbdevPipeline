@@ -12,11 +12,11 @@ This file will become your README and also the index of your documentation.
 
 Fill me in please! Don't forget code examples:
 
-```python
+```
 data = get_data("data/new_maisons-nan.csv")
 ```
 
-```python
+```
 data.head()
 ```
 
@@ -101,7 +101,7 @@ data.head()
 
 
 
-```python
+```
 data.info()
 ```
 
@@ -120,14 +120,14 @@ data.info()
     memory usage: 656.0+ bytes
 
 
-```python
+```
 X = data.iloc[:,:-2]
 y = data["classe"]
 ```
 
 ### Example of our TransformeeMaison Class
 
-```python
+```
 trsf = TransformeeMaison(dateTo='age')
 new_data = trsf.fit(X).transform(X)
 new_data.head()
@@ -210,11 +210,11 @@ new_data.head()
 
 ## Let's apply our Pipeline Pipy
 
-```python
+```
 X_train,X_test,y_train,y_test = split_data(X,y,0.2)
 ```
 
-```python
+```
 from sklearn.pipeline import Pipeline
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
@@ -236,13 +236,13 @@ Params ={
 
 ## initialisation of Pipy Class
 
-```python
+```
 p =Pipy(Pipe,Params)
 ```
 
 ## searching best Params
 
-```python
+```
 p.gridSearchy(X_train,y_train)
 ```
 
@@ -260,7 +260,7 @@ p.gridSearchy(X_train,y_train)
 
 
 
-```python
+```
 p.gridBestEstimator()
 ```
 

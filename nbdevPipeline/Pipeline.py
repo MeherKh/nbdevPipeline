@@ -60,7 +60,6 @@ class TransformeeMaison(BaseEstimator, TransformerMixin):
 
         return X_
 
-
 # Cell
 def split_data(X,y,test_size):
     X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=test_size)
@@ -78,4 +77,3 @@ class Pipy :
         return self.gs
     def gridBestEstimator(self):
         return self.gs.best_estimator_
-
